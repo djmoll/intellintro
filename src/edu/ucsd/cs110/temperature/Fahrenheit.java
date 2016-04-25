@@ -11,8 +11,8 @@ public class Fahrenheit extends Temperature {
 
     @Override
     public Temperature toCelsius() {
-        float local = (value-32)*(5/9);
-        return new Celsius(local);
+        double local = (value-32)*(5.0/9.0);
+        return new Celsius((float) local);
     }
 
     @Override
@@ -21,9 +21,7 @@ public class Fahrenheit extends Temperature {
     }
 
 
-
-    public String toString()
-    {
+    public String toString() {
         return value + " F";
     }
 }
